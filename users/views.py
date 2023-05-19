@@ -50,6 +50,9 @@ class AuthenticatedUserData(APIView):
             'prenom': user.prenom,
             'phone': user.phone,
             'nni': user.nni,
+            'bank_id': user.bank_id.id,
+            'bank_name': user.bank_id.nom,
+            'telephone': user.phone
         }
 
         return Response(user_data)

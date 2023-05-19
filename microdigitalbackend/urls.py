@@ -16,7 +16,8 @@ urlpatterns = [
     path('transaction/',include('transactions.urls', namespace="transactions")),
     path('users/',include('users.urls', namespace="users")), 
 ]
-
+#numero superuser 32111214
+#password superuser mmj
 # urlpatterns += staticfiles_urlpatterns()
 
 urlpatterns += static(settings.STATIC_URL, document_root = settings.STATIC_ROOT)

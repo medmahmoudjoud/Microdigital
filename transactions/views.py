@@ -77,6 +77,7 @@ class LoanListView(generics.ListAPIView):
         },status=200)
     
 class LoanView(APIView):
+    permission_classes = [IsAuthenticated]
     def get(self,request,id):
         bank = Bank.objects.get(id=id)
         query = Loan.objects.filter(bank=bank.id)
